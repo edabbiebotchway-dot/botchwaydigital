@@ -16,7 +16,7 @@ export default function Hero() {
           {/* Left content */}
           <div className="flex-1 text-center md:text-left">
             <div className="inline-block mb-4 px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-              <span className="text-blue-300 text-sm font-medium">Botchway Digital</span>
+              <span className="text-blue-300 text-sm font-medium">Botchway I.T Solution</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
@@ -24,13 +24,13 @@ export default function Hero() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-6">
-              Founder & Chief Digital Officer | Full-Stack Developer
+              Full-Stack Developer | Web & Mobile Apps | UX/UI Designer | Data Analyst
             </p>
             
             <p className="text-lg text-gray-400 mb-8 max-w-2xl">
-              Complete digital solutions spanning web & mobile development, data analytics, AI, UX/UI design, 
-              graphic design, and photography. Transforming ideas into powerful digital experiences with 
-              Botchway Digital.
+              Full-stack developer specializing in web & mobile applications, e-commerce solutions, 
+              UX/UI design, data analytics, and AI integration. Building powerful digital experiences 
+              from front-end to back-end with Botchway I.T Solution.
             </p>
 
             {/* Contact buttons */}
@@ -81,9 +81,11 @@ export default function Hero() {
           <div className="flex-1 flex justify-center">
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50">
-                <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center">
-                  <span className="text-6xl font-bold text-blue-400">EB</span>
-                </div>
+                <img 
+                  src="/images/professional-photo-2.jpg" 
+                  alt="Emmanuel Dabbie Botchway" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500 rounded-lg opacity-80 animate-float"></div>

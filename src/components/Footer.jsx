@@ -36,9 +36,18 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">BD</span>
+                <img 
+                  src="/images/logo.png" 
+                  alt="Botchway IT Solution Logo"
+                  className="w-8 h-8 object-contain"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="text-white font-bold text-lg" style={{display: 'none'}}>BIT</span>
               </div>
-              <span className="font-bold text-xl">Botchway Digital</span>
+              <span className="font-bold text-xl">Botchway IT Solution</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Complete digital solutions spanning web & mobile development, data analytics, AI, 

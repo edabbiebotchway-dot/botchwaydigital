@@ -5,73 +5,73 @@ export default function Services() {
   const services = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Power BI Dashboard Development",
-      description: "Create interactive and visually appealing Power BI dashboards that transform your data into actionable insights. Custom KPIs, real-time monitoring, and automated reporting.",
+      title: "Full-Stack Web Development",
+      description: "End-to-end web application development from frontend to backend. Modern, scalable, and responsive web solutions using React, Node.js, and cloud technologies.",
       features: [
-        "Custom dashboard design",
-        "DAX expressions & calculations",
-        "Real-time data connections",
-        "Interactive visualizations"
+        "Frontend development (React, HTML/CSS)",
+        "Backend development (Node.js, APIs)",
+        "Database design & integration",
+        "Responsive & mobile-first design"
       ],
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Database className="w-8 h-8" />,
-      title: "Data Analysis & Insights",
-      description: "Comprehensive data analysis services to uncover trends, patterns, and opportunities. Transform raw data into meaningful business intelligence.",
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android. Beautiful, performant apps that deliver exceptional user experiences.",
       features: [
-        "Statistical analysis",
-        "Trend identification",
-        "Predictive analytics",
-        "Performance metrics"
+        "React Native development",
+        "iOS & Android apps",
+        "App Store deployment",
+        "Push notifications & analytics"
       ],
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: <FileSpreadsheet className="w-8 h-8" />,
-      title: "Advanced Excel Solutions",
-      description: "Leverage advanced Excel capabilities for data management, automation, and analysis. Custom formulas, pivot tables, macros, and complex calculations.",
+      title: "E-Commerce Solutions",
+      description: "Complete e-commerce platforms with payment integration, inventory management, and conversion optimization. Build and grow your online store.",
       features: [
-        "Complex formulas & functions",
-        "Pivot tables & charts",
-        "Data validation & cleaning",
-        "Automated workflows"
+        "Shopify & WooCommerce development",
+        "Payment gateway integration",
+        "Shopping cart optimization",
+        "Product management systems"
       ],
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "ETL Process Implementation",
-      description: "Design and implement efficient ETL (Extract, Transform, Load) processes to ensure data quality, consistency, and accessibility across your organization.",
+      title: "UX/UI Design & Development",
+      description: "User-centered design that combines aesthetics with functionality. From wireframes to interactive prototypes to final implementation.",
       features: [
-        "Data extraction pipelines",
-        "Transformation logic",
-        "Data quality assurance",
-        "Integration solutions"
+        "User research & personas",
+        "Wireframing & prototyping",
+        "UI design in Figma",
+        "Usability testing & iteration"
       ],
       color: "from-orange-500 to-red-500"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Business Intelligence Consulting",
-      description: "Strategic BI consulting to help you make data-driven decisions. From strategy development to implementation and optimization.",
+      title: "Data Analytics & Business Intelligence",
+      description: "Transform data into actionable insights with custom dashboards, reports, and analytics solutions using Power BI and advanced Excel.",
       features: [
-        "BI strategy development",
-        "Tool selection & implementation",
-        "Best practices guidance",
-        "Training & support"
+        "Power BI dashboard development",
+        "Data visualization & reporting",
+        "Excel automation & analytics",
+        "KPI tracking & monitoring"
       ],
       color: "from-indigo-500 to-blue-500"
     },
     {
       icon: <PieChart className="w-8 h-8" />,
-      title: "Sales & Operations Analytics",
-      description: "Specialized analytics for sales operations, customer behavior, inventory management, and operational efficiency optimization.",
+      title: "AI Integration & Automation",
+      description: "Integrate artificial intelligence and machine learning into your applications. Chatbots, automation, and intelligent features.",
       features: [
-        "Sales performance tracking",
-        "Customer analytics",
-        "Inventory optimization",
-        "Process improvement"
+        "AI-powered chatbots",
+        "API integration (ChatGPT, etc.)",
+        "Process automation",
+        "Predictive analytics"
       ],
       color: "from-yellow-500 to-orange-500"
     }

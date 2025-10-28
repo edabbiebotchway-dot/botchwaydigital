@@ -1,14 +1,16 @@
-import React from 'react';
-import { Briefcase, Calendar, MapPin, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Briefcase, Calendar, MapPin, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function Experience() {
+  const [expandedIndex, setExpandedIndex] = useState(0); // First item open by default
+
   const experiences = [
     {
       title: "Sales and Marketing Supervisor",
       company: "True Harvest Enterprise",
       location: "Accra, Ghana",
       period: "January 2024 - Present",
-      current: true,
+      current: false,
       achievements: [
         "Supervise daily sales operations for team of 3 staff members, ensuring 100% compliance with company standards",
         "Analyze sales data using Excel to identify trends and optimize product placement, contributing to 15% revenue growth",
@@ -74,7 +76,7 @@ export default function Experience() {
       ]
     },
     {
-      title: "IT Support Officer (Internship)",
+      title: "IT Support Officer",
       company: "Ghana Atomic Energy Commission",
       location: "Accra, Ghana",
       period: "June 2014 - October 2014",
@@ -86,6 +88,10 @@ export default function Experience() {
       ]
     }
   ];
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section id="experience" className="py-20 bg-slate-50">
@@ -100,60 +106,80 @@ export default function Experience() {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
-
-            {experiences.map((exp, index) => (
-              <div key={index} className="mb-12 relative">
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-
-                <div className={`md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
-                    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 transform hover:-translate-y-1">
-                      <div className="mb-4">
-                        <div className="flex items-start justify-between mb-2">
-                          <h3 className="text-xl font-bold text-slate-900 flex-1">
-                            {exp.title}
-                          </h3>
-                          {exp.current && (
-                            <span className="ml-2 px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
-                              Current
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex items-center text-blue-600 font-semibold mb-2">
-                          <Briefcase className="w-4 h-4 mr-2" />
-                          {exp.company}
-                        </div>
-                        <div className="flex flex-wrap gap-3 text-sm text-slate-600">
-                          <div className="flex items-center">
-                            <MapPin className="w-4 h-4 mr-1" />
-                            {exp.location}
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {exp.period}
-                          </div>
-                        </div>
+        <div className="max-w-4xl mx-auto space-y-4">
+          {experiences.map((exp, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl"
+            >
+              {/* Accordion Header */}
+              <button
+                onClick={() => toggleExpand(index)}
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-slate-50 transition-colors duration-200"
+              >
+                <div className="flex items-start gap-4 flex-1 text-left">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Briefcase className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <h3 className="text-lg font-bold text-slate-900">
+                        {exp.title}
+                      </h3>
+                      {exp.current && (
+                        <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full whitespace-nowrap">
+                          Current
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-blue-600 font-semibold mb-2">
+                      {exp.company}
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-sm text-slate-600">
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        {exp.location}
                       </div>
-
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-start text-slate-700">
-                            <TrendingUp className="w-4 h-4 mr-2 mt-1 text-blue-600 flex-shrink-0" />
-                            <span className="text-sm leading-relaxed">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {exp.period}
+                      </div>
                     </div>
                   </div>
-                  
-                  <div className="hidden md:block md:w-1/2"></div>
+                </div>
+                
+                {/* Expand/Collapse Icon */}
+                <div className="ml-4">
+                  {expandedIndex === index ? (
+                    <ChevronUp className="w-6 h-6 text-slate-600" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-slate-600" />
+                  )}
+                </div>
+              </button>
+
+              {/* Accordion Content */}
+              <div 
+                className={`overflow-hidden transition-all duration-300 ${
+                  expandedIndex === index ? 'max-h-[1000px]' : 'max-h-0'
+                }`}
+              >
+                <div className="px-6 pb-6 pt-2">
+                  <div className="pl-16">
+                    <h4 className="text-sm font-semibold text-slate-700 mb-3">Key Achievements:</h4>
+                    <ul className="space-y-2">
+                      {exp.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex items-start text-slate-700">
+                          <TrendingUp className="w-4 h-4 mr-2 mt-1 text-blue-600 flex-shrink-0" />
+                          <span className="text-sm leading-relaxed">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

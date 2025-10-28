@@ -4,9 +4,69 @@ import { BarChart3, Database, LineChart, Cpu, Users, Shield, Code, Palette, Came
 export default function Skills() {
   const skillCategories = [
     {
+      icon: <Code className="w-6 h-6" />,
+      title: "Full-Stack Development",
+      color: "from-blue-500 to-cyan-500",
+      skills: [
+        { name: "React.js", level: 85 },
+        { name: "JavaScript (ES6+)", level: 88 },
+        { name: "Node.js & Express", level: 80 },
+        { name: "HTML5 & CSS3", level: 90 },
+        { name: "API Development & Integration", level: 82 }
+      ]
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "Web Development",
+      color: "from-green-500 to-emerald-500",
+      skills: [
+        { name: "Responsive Web Design", level: 92 },
+        { name: "Frontend Frameworks", level: 85 },
+        { name: "Tailwind CSS", level: 88 },
+        { name: "Web Performance Optimization", level: 80 },
+        { name: "Progressive Web Apps", level: 75 }
+      ]
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "Mobile App Development",
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "React Native", level: 80 },
+        { name: "iOS & Android Development", level: 78 },
+        { name: "Mobile UI/UX", level: 85 },
+        { name: "App Store Deployment", level: 75 },
+        { name: "Cross-Platform Apps", level: 82 }
+      ]
+    },
+    {
+      icon: <Palette className="w-6 h-6" />,
+      title: "UX/UI Development",
+      color: "from-indigo-500 to-blue-500",
+      skills: [
+        { name: "User Research & Testing", level: 85 },
+        { name: "Wireframing & Prototyping", level: 88 },
+        { name: "Figma & Design Tools", level: 90 },
+        { name: "User Interface Design", level: 87 },
+        { name: "Design Systems", level: 82 }
+      ]
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "E-Commerce Development",
+      color: "from-orange-500 to-red-500",
+      skills: [
+        { name: "Shopify Development", level: 83 },
+        { name: "WooCommerce", level: 80 },
+        { name: "Payment Gateway Integration", level: 85 },
+        { name: "Shopping Cart Optimization", level: 82 },
+        { name: "E-commerce Analytics", level: 88 }
+      ]
+    },
+    {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Data Analysis & Visualization",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-yellow-500 to-orange-500",
       skills: [
         { name: "Microsoft Excel", level: 95 },
         { name: "Power BI", level: 90 },
@@ -17,36 +77,24 @@ export default function Skills() {
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Data Management",
-      color: "from-purple-500 to-pink-500",
+      title: "Database & Backend",
+      color: "from-teal-500 to-cyan-500",
       skills: [
-        { name: "SQL (Basic)", level: 70 },
-        { name: "Data Cleaning", level: 92 },
-        { name: "ETL Processes", level: 85 },
-        { name: "DAX Expressions", level: 88 },
-        { name: "Data Transformation", level: 90 }
-      ]
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Web Development",
-      color: "from-green-500 to-emerald-500",
-      skills: [
-        { name: "HTML/CSS", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "React.js", level: 75 },
-        { name: "Responsive Design", level: 88 },
-        { name: "Tailwind CSS", level: 82 }
+        { name: "SQL & Databases", level: 78 },
+        { name: "MongoDB", level: 72 },
+        { name: "Data Modeling", level: 80 },
+        { name: "RESTful APIs", level: 83 },
+        { name: "Server Management", level: 75 }
       ]
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Artificial Intelligence & ML",
-      color: "from-orange-500 to-red-500",
+      title: "AI & Machine Learning",
+      color: "from-pink-500 to-red-500",
       skills: [
-        { name: "Machine Learning Basics", level: 65 },
-        { name: "AI Tools & Platforms", level: 75 },
-        { name: "Data Science", level: 70 },
+        { name: "AI Integration", level: 75 },
+        { name: "Machine Learning Basics", level: 70 },
+        { name: "ChatGPT & LLM APIs", level: 80 },
         { name: "Python (Basic)", level: 68 },
         { name: "Predictive Analytics", level: 72 }
       ]
@@ -54,61 +102,25 @@ export default function Skills() {
     {
       icon: <Palette className="w-6 h-6" />,
       title: "Graphic Design",
-      color: "from-indigo-500 to-blue-500",
+      color: "from-violet-500 to-purple-500",
       skills: [
         { name: "Adobe Photoshop", level: 78 },
         { name: "Canva", level: 85 },
-        { name: "UI/UX Design Basics", level: 72 },
-        { name: "Brand Identity", level: 75 },
-        { name: "Visual Communication", level: 80 }
+        { name: "Brand Identity Design", level: 80 },
+        { name: "Logo Design", level: 82 },
+        { name: "Visual Communication", level: 83 }
       ]
     },
     {
       icon: <Camera className="w-6 h-6" />,
       title: "Photography & Media",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-amber-500 to-orange-500",
       skills: [
         { name: "Digital Photography", level: 80 },
         { name: "Photo Editing", level: 82 },
-        { name: "Composition", level: 85 },
-        { name: "Lighting Techniques", level: 75 },
-        { name: "Content Creation", level: 78 }
-      ]
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "IT & Systems",
-      color: "from-pink-500 to-red-500",
-      skills: [
-        { name: "Network Configuration", level: 80 },
-        { name: "Hardware/Software Installation", level: 85 },
-        { name: "System Troubleshooting", level: 88 },
-        { name: "Cybersecurity Basics", level: 75 },
-        { name: "IT Support", level: 90 }
-      ]
-    },
-    {
-      icon: <LineChart className="w-6 h-6" />,
-      title: "Microsoft Office Suite",
-      color: "from-teal-500 to-cyan-500",
-      skills: [
-        { name: "Excel (Advanced)", level: 95 },
-        { name: "PowerPoint", level: 88 },
-        { name: "Word", level: 90 },
-        { name: "Outlook", level: 85 },
-        { name: "Google Workspace", level: 82 }
-      ]
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Business & Management",
-      color: "from-violet-500 to-purple-500",
-      skills: [
-        { name: "CRM", level: 85 },
-        { name: "Project Management", level: 80 },
-        { name: "Process Optimization", level: 87 },
-        { name: "Sales Operations", level: 88 },
-        { name: "Team Leadership", level: 83 }
+        { name: "Composition & Lighting", level: 85 },
+        { name: "Product Photography", level: 78 },
+        { name: "Content Creation", level: 80 }
       ]
     }
   ];

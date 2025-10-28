@@ -55,9 +55,18 @@ export default function Navbar() {
             className="flex items-center space-x-2 group"
           >
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform">
-              <span className="text-white font-bold text-lg">BD</span>
+              <img 
+                src="/images/logo.png" 
+                alt="Botchway IT Solution Logo"
+                className="w-8 h-8 object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'block';
+                }}
+              />
+              <span className="text-white font-bold text-lg" style={{display: 'none'}}>BIT</span>
             </div>
-            <span className="text-white font-bold text-xl hidden sm:block">Botchway Digital</span>
+            <span className="text-white font-bold text-xl hidden sm:block">Botchway IT Solution</span>
           </a>
 
           <div className="hidden lg:flex items-center space-x-1">
